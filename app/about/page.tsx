@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Target, Lightbulb, Users, Heart, Award, Calendar } from "lucide-react";
+import { ArrowRight, Target, Lightbulb, Users, Heart, Award } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
@@ -42,38 +42,7 @@ const awards = [
   { name: "Control Award", event: "League Tournament", year: "2022" },
 ];
 
-const timeline = [
-  {
-    year: "2019",
-    title: "Team Founded",
-    description: "Despicable Machines was founded with 6 students and a dream.",
-  },
-  {
-    year: "2020",
-    title: "First Competition",
-    description: "Competed in our first FTC season, learning the ropes.",
-  },
-  {
-    year: "2021",
-    title: "First Award",
-    description: "Won our first competition award - the Connect Award.",
-  },
-  {
-    year: "2022",
-    title: "State Championship",
-    description: "Qualified for and competed in the State Championship.",
-  },
-  {
-    year: "2023",
-    title: "Outreach Expansion",
-    description: "Launched our community outreach program, reaching 500+ students.",
-  },
-  {
-    year: "2024",
-    title: "Inspire Award",
-    description: "Won the prestigious Inspire Award at the State Championship.",
-  },
-];
+
 
 const mentors = [
   {
@@ -162,54 +131,6 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="Our Journey"
-            title="Team History"
-            description="From humble beginnings to where we are today."
-          />
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 top-0 h-full w-0.5 bg-border md:left-1/2 md:-translate-x-1/2" />
-            
-            <div className="space-y-8">
-              {timeline.map((item, index) => (
-                <div
-                  key={item.year}
-                  className={cn(
-                    "relative flex items-start gap-6 md:gap-12",
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  )}
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground md:left-1/2 md:-translate-x-1/2">
-                    <Calendar className="h-4 w-4" />
-                  </div>
-                  
-                  {/* Content */}
-                  <div className={cn(
-                    "ml-16 md:ml-0 md:w-1/2",
-                    index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
-                  )}>
-                    <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
-                      {item.year}
-                    </span>
-                    <h3 className="mt-2 font-display text-xl font-semibold">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

@@ -94,7 +94,7 @@ export default function HomePage() {
                     2024-25 Season Robot
                   </h3>
                   <p className="mt-2 text-accent-foreground/70">
-                    INTO THE DEEP
+                    DECODE
                   </p>
                   <Link
                     href="/robot"

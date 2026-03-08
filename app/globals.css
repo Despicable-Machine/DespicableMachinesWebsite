@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* Minion-inspired yellow and blue theme */
-  --background: 48 100% 98%;
-  --foreground: 220 25% 15%;
+  /* Minion-inspired yellow and blue theme - Dark mode */
+  --background: 220 20% 12%;
+  --foreground: 0 0% 95%;
   
   --primary: 45 100% 51%; /* Minion Yellow */
   --primary-foreground: 220 25% 15%;
   
-  --secondary: 210 100% 40%; /* Minion Blue */
+  --secondary: 210 100% 45%; /* Minion Blue */
   --secondary-foreground: 0 0% 100%;
   
-  --accent: 220 25% 15%; /* Dark accent */
-  --accent-foreground: 0 0% 100%;
+  --accent: 220 20% 18%; /* Dark accent for sections */
+  --accent-foreground: 0 0% 95%;
   
-  --muted: 45 30% 92%;
-  --muted-foreground: 220 15% 40%;
+  --muted: 220 20% 16%;
+  --muted-foreground: 220 10% 65%;
   
-  --card: 0 0% 100%;
-  --card-foreground: 220 25% 15%;
+  --card: 220 20% 16%;
+  --card-foreground: 0 0% 95%;
   
-  --border: 45 30% 85%;
+  --border: 220 15% 25%;
   --ring: 45 100% 51%;
   
   --radius: 1rem;
