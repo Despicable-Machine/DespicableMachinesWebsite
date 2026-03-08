@@ -41,12 +41,19 @@ const majorAwards = [
 
 const allAwards = [
   {
+    season: "2025-26",
+    awards: [
+      // Add your awards here like this:
+      // { name: "Award Name", event: "Event Name", date: "Month Year" },
+    ],
+  },
+  {
     season: "2024-25",
     awards: [
-      { name: "Inspire Award", event: "State Championship", date: "April 2024" },
-      { name: "Design Award", event: "Regional Championship", date: "March 2024" },
-      { name: "Think Award", event: "League Tournament #3", date: "February 2024" },
-      { name: "Connect Award", event: "League Tournament #2", date: "February 2024" },
+      { name: "Inspire Award", event: "State Championship", date: "April 2025" },
+      { name: "Design Award", event: "Regional Championship", date: "March 2025" },
+      { name: "Think Award", event: "League Tournament #3", date: "February 2025" },
+      { name: "Connect Award", event: "League Tournament #2", date: "February 2025" },
     ],
   },
   {
