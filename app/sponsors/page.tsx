@@ -2,14 +2,12 @@ import Link from "next/link";
 import {
   ArrowRight,
   Heart,
-  Star,
-  Gem,
-  Award,
   Target,
   Users,
   Megaphone,
   CheckCircle,
   Mail,
+  Award,
 } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -17,85 +15,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const sponsorTiers = [
-  {
-    name: "Platinum",
-    amount: "$2,500+",
-    icon: Gem,
-    color: "primary",
-    benefits: [
-      "Logo on robot",
-      "Logo on team shirts",
-      "Featured on website homepage",
-      "Social media recognition",
-      "Team visit or presentation",
-      "VIP competition access",
-      "Quarterly impact reports",
-    ],
-  },
-  {
-    name: "Gold",
-    amount: "$1,000+",
-    icon: Star,
-    color: "primary",
-    benefits: [
-      "Logo on team shirts",
-      "Featured on website",
-      "Social media recognition",
-      "Team visit or presentation",
-      "Bi-annual impact reports",
-    ],
-  },
-  {
-    name: "Silver",
-    amount: "$500+",
-    icon: Award,
-    color: "secondary",
-    benefits: [
-      "Name on website",
-      "Social media recognition",
-      "Thank you certificate",
-      "Annual impact report",
-    ],
-  },
-  {
-    name: "Bronze",
-    amount: "$100+",
-    icon: Heart,
-    color: "secondary",
-    benefits: [
-      "Name on website",
-      "Thank you certificate",
-      "Newsletter updates",
-    ],
-  },
+const currentSponsors = [
+  { name: "TechCorp Industries", logo: "TC" },
+  { name: "Innovation Labs", logo: "IL" },
+  { name: "Engineering Solutions", logo: "ES" },
+  { name: "Future Makers Inc", logo: "FM" },
+  { name: "STEM Foundation", logo: "SF" },
+  { name: "Local Hardware Store", logo: "LH" },
+  { name: "Community Bank", logo: "CB" },
+  { name: "Smith & Associates", logo: "SA" },
 ];
-
-const currentSponsors = {
-  platinum: [
-    { name: "TechCorp Industries", logo: "TC" },
-    { name: "Innovation Labs", logo: "IL" },
-  ],
-  gold: [
-    { name: "Engineering Solutions", logo: "ES" },
-    { name: "Future Makers Inc", logo: "FM" },
-    { name: "STEM Foundation", logo: "SF" },
-  ],
-  silver: [
-    { name: "Local Hardware Store", logo: "LH" },
-    { name: "Community Bank", logo: "CB" },
-    { name: "Smith & Associates", logo: "SA" },
-    { name: "Tech Services LLC", logo: "TS" },
-  ],
-  bronze: [
-    { name: "Johnson Family", logo: "JF" },
-    { name: "Chen Family", logo: "CF" },
-    { name: "Williams Family", logo: "WF" },
-    { name: "Martinez Family", logo: "MF" },
-    { name: "Local Pizza Shop", logo: "LP" },
-    { name: "Downtown Cafe", logo: "DC" },
-  ],
-};
 
 const howFundsAreUsed = [
   {
@@ -142,168 +71,26 @@ export default function SponsorsPage() {
             description="These organizations and individuals make our work possible."
           />
 
-          {/* Platinum Sponsors */}
-          <div className="mb-12">
-            <div className="flex items-center gap-2 mb-6">
-              <Gem className="h-5 w-5 text-primary" />
-              <h3 className="font-display text-lg font-semibold">
-                Platinum Sponsors
-              </h3>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {currentSponsors.platinum.map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="flex items-center gap-4 rounded-2xl bg-primary/5 border border-primary/20 p-6"
-                >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary text-primary-foreground font-display text-xl font-bold">
-                    {sponsor.logo}
-                  </div>
-                  <span className="font-display text-lg font-semibold">
-                    {sponsor.name}
-                  </span>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {currentSponsors.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="flex items-center gap-4 rounded-2xl bg-card border border-border p-6"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-primary-foreground font-display text-lg font-bold">
+                  {sponsor.logo}
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Gold Sponsors */}
-          <div className="mb-12">
-            <div className="flex items-center gap-2 mb-6">
-              <Star className="h-5 w-5 text-primary" />
-              <h3 className="font-display text-lg font-semibold">
-                Gold Sponsors
-              </h3>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {currentSponsors.gold.map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="flex items-center gap-4 rounded-xl bg-card border border-border p-4"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary font-display font-bold">
-                    {sponsor.logo}
-                  </div>
-                  <span className="font-medium">{sponsor.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Silver Sponsors */}
-          <div className="mb-12">
-            <div className="flex items-center gap-2 mb-6">
-              <Award className="h-5 w-5 text-secondary" />
-              <h3 className="font-display text-lg font-semibold">
-                Silver Sponsors
-              </h3>
-            </div>
-            <div className="grid gap-4 grid-cols-2 sm:grid-cols-4">
-              {currentSponsors.silver.map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="flex items-center gap-3 rounded-lg bg-muted p-3"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-secondary/10 text-secondary text-sm font-bold">
-                    {sponsor.logo}
-                  </div>
-                  <span className="text-sm font-medium truncate">
-                    {sponsor.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bronze Sponsors */}
-          <div>
-            <div className="flex items-center gap-2 mb-6">
-              <Heart className="h-5 w-5 text-secondary" />
-              <h3 className="font-display text-lg font-semibold">
-                Bronze Sponsors
-              </h3>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {currentSponsors.bronze.map((sponsor) => (
-                <span
-                  key={sponsor.name}
-                  className="rounded-full bg-muted px-4 py-2 text-sm font-medium"
-                >
+                <span className="font-display font-semibold">
                   {sponsor.name}
                 </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sponsor Tiers */}
-      <section className="py-20 sm:py-28 bg-muted">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="Partnership Levels"
-            title="Sponsorship Tiers"
-            description="Choose a sponsorship level that works for you and help us achieve our goals."
-          />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {sponsorTiers.map((tier) => (
-              <Card
-                key={tier.name}
-                className={cn(
-                  tier.name === "Platinum" && "ring-2 ring-primary"
-                )}
-              >
-                <CardContent className="p-6">
-                  <div
-                    className={cn(
-                      "flex h-12 w-12 items-center justify-center rounded-xl",
-                      tier.color === "primary"
-                        ? "bg-primary/10"
-                        : "bg-secondary/10"
-                    )}
-                  >
-                    <tier.icon
-                      className={cn(
-                        "h-6 w-6",
-                        tier.color === "primary"
-                          ? "text-primary"
-                          : "text-secondary"
-                      )}
-                    />
-                  </div>
-                  <h3 className="mt-4 font-display text-xl font-semibold">
-                    {tier.name}
-                  </h3>
-                  <p
-                    className={cn(
-                      "text-2xl font-bold mt-1",
-                      tier.color === "primary"
-                        ? "text-primary"
-                        : "text-secondary"
-                    )}
-                  >
-                    {tier.amount}
-                  </p>
-                  <ul className="mt-4 space-y-2">
-                    {tier.benefits.map((benefit) => (
-                      <li
-                        key={benefit}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                      >
-                        <CheckCircle className="h-4 w-4 shrink-0 text-green-500 mt-0.5" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* How Funds Are Used */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 sm:py-28 bg-muted">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="Transparency"

@@ -134,9 +134,8 @@ export default function AboutFTCPage() {
               </p>
               <p className="mt-4 text-muted-foreground text-pretty">
                 Each year, teams are presented with a new game theme and
-                challenge. The 2024-25 season theme is &quot;INTO THE DEEP&quot; - an
-                underwater adventure where robots must navigate ocean-themed
-                challenges.
+                challenge. The 2024-25 season theme is &quot;DECODE&quot; where robots must
+                navigate strategic challenges in this exciting new game.
               </p>
               <p className="mt-4 text-muted-foreground text-pretty">
                 FTC is part of the FIRST family of programs, which also includes

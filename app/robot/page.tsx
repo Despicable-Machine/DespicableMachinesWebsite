@@ -116,7 +116,7 @@ export default function RobotPage() {
       <PageHero
         label="2024-25 Season"
         title="Meet Our Robot"
-        description="Designed and built for INTO THE DEEP - our most advanced robot yet, featuring precision mechanics and intelligent autonomous systems."
+        description="Designed and built for DECODE - our most advanced robot yet, featuring precision mechanics and intelligent autonomous systems."
       />
 
       {/* Robot Overview */}
@@ -130,8 +130,8 @@ export default function RobotPage() {
                 align="left"
               />
               <p className="text-muted-foreground text-pretty">
-                Our 2024-25 season robot is designed specifically for the INTO
-                THE DEEP challenge. Every component has been carefully
+                Our 2024-25 season robot is designed specifically for the DECODE
+                challenge. Every component has been carefully
                 engineered to maximize performance while maintaining reliability
                 throughout the competition season.
               </p>
@@ -160,7 +160,7 @@ export default function RobotPage() {
                 <div className="flex h-full flex-col items-center justify-center text-center">
                   <Cog className="h-24 w-24 text-primary animate-spin-slow" />
                   <h3 className="mt-6 font-display text-2xl font-bold">
-                    INTO THE DEEP
+                    DECODE
                   </h3>
                   <p className="mt-2 text-muted-foreground">
                     Season 2024-25 Robot

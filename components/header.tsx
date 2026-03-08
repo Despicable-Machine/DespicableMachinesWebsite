@@ -31,7 +31,7 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent-foreground/10">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -41,7 +41,7 @@ export function Header() {
                 DM
               </span>
             </div>
-            <span className="hidden font-display text-xl font-bold text-foreground sm:block">
+            <span className="hidden font-display text-xl font-bold text-accent-foreground sm:block">
               Despicable Machines
             </span>
           </Link>
@@ -56,13 +56,13 @@ export function Header() {
                   onMouseEnter={() => setOpenDropdown(item.name)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted">
+                  <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-foreground/10">
                     {item.name}
                     <ChevronDown className="h-4 w-4" />
                   </button>
                   <div
                     className={cn(
-                      "absolute left-0 top-full mt-1 w-48 rounded-lg bg-card p-2 shadow-lg border border-border transition-all",
+                      "absolute left-0 top-full mt-1 w-48 rounded-lg bg-accent p-2 shadow-lg border border-accent-foreground/10 transition-all",
                       openDropdown === item.name
                         ? "opacity-100 visible"
                         : "opacity-0 invisible"
@@ -72,7 +72,7 @@ export function Header() {
                       <Link
                         key={child.name}
                         href={child.href}
-                        className="block rounded-md px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                        className="block rounded-md px-3 py-2 text-sm text-accent-foreground transition-colors hover:bg-accent-foreground/10"
                       >
                         {child.name}
                       </Link>
@@ -83,7 +83,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-foreground/10"
                 >
                   {item.name}
                 </Link>
@@ -104,7 +104,7 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="lg:hidden rounded-lg p-2 text-foreground hover:bg-muted"
+            className="lg:hidden rounded-lg p-2 text-accent-foreground hover:bg-accent-foreground/10"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open menu</span>
@@ -133,7 +133,7 @@ export function Header() {
                         openDropdown === item.name ? null : item.name
                       )
                     }
-                    className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
+                    className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-accent-foreground hover:bg-accent-foreground/10"
                   >
                     {item.name}
                     <ChevronDown
@@ -153,7 +153,7 @@ export function Header() {
                       <Link
                         key={child.name}
                         href={child.href}
-                        className="block rounded-lg px-6 py-2 text-sm text-muted-foreground hover:bg-muted"
+                        className="block rounded-lg px-6 py-2 text-sm text-accent-foreground/70 hover:bg-accent-foreground/10"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {child.name}
@@ -165,7 +165,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
+                  className="block rounded-lg px-3 py-2 text-base font-medium text-accent-foreground hover:bg-accent-foreground/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
