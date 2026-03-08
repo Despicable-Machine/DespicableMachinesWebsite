@@ -1,11 +1,11 @@
 {
   "pages": {
     "/page": [
-      "static/chunks/[root-of-the-server]__cbe26723._.css",
+      "static/chunks/[next]_internal_font_google_fa8a0cca._.css",
       "static/chunks/node_modules_c4817f3b._.js",
       "static/chunks/_1cf1f135._.js",
       "static/chunks/app_layout_tsx_0a548d63._.js",
-      "static/chunks/node_modules_next_dist_client_components_builtin_global-error_56b53308.js",
+      "static/chunks/node_modules_next_dist_client_components_builtin_global-error_31290eb7.js",
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_57d40746._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
       "static/chunks/node_modules_next_dist_compiled_next-devtools_index_a9cb0712.js",
