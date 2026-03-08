@@ -1,11 +1,9 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  Trophy,
   Award,
   Star,
   Calendar,
-  MapPin,
   Sparkles,
 } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
@@ -87,33 +85,7 @@ const achievements = [
   { value: "5", label: "Seasons Competing" },
 ];
 
-const timeline = [
-  {
-    year: "2024",
-    highlight: "Inspire Award Winner",
-    description: "Won our first Inspire Award at the State Championship.",
-  },
-  {
-    year: "2023",
-    highlight: "Regional Champions",
-    description: "First-ever regional championship victory.",
-  },
-  {
-    year: "2022",
-    highlight: "State Qualifier",
-    description: "Qualified for state championship for the second time.",
-  },
-  {
-    year: "2021",
-    highlight: "First Award",
-    description: "Won our first competition award - the Connect Award.",
-  },
-  {
-    year: "2020",
-    highlight: "Rookie Season",
-    description: "Competed in our first FTC season.",
-  },
-];
+
 
 export default function AwardsPage() {
   return (
@@ -179,50 +151,7 @@ export default function AwardsPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 sm:py-28 bg-muted">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="Our Journey"
-            title="Achievement Timeline"
-            description="Key milestones in our team's history."
-          />
-          <div className="relative">
-            <div className="absolute left-4 top-0 h-full w-0.5 bg-border md:left-1/2 md:-translate-x-1/2" />
-            <div className="space-y-8">
-              {timeline.map((item, index) => (
-                <div
-                  key={item.year}
-                  className={cn(
-                    "relative flex items-start gap-6 md:gap-12",
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  )}
-                >
-                  <div className="absolute left-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground md:left-1/2 md:-translate-x-1/2">
-                    <Trophy className="h-4 w-4" />
-                  </div>
-                  <div
-                    className={cn(
-                      "ml-16 md:ml-0 md:w-1/2",
-                      index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
-                    )}
-                  >
-                    <span className="inline-block rounded-full bg-primary px-4 py-1 text-sm font-semibold text-primary-foreground">
-                      {item.year}
-                    </span>
-                    <h3 className="mt-2 font-display text-xl font-semibold">
-                      {item.highlight}
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Complete Award List */}
       <section className="py-20 sm:py-28">
