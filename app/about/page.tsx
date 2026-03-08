@@ -1,0 +1,306 @@
+import Link from "next/link";
+import { ArrowRight, Target, Lightbulb, Users, Heart, Award, Calendar } from "lucide-react";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionHeader } from "@/components/ui/section-header";
+import { Card, CardContent } from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const values = [
+  {
+    icon: Target,
+    title: "Excellence",
+    description:
+      "We strive for excellence in everything we do, from engineering to outreach.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation",
+    description:
+      "We embrace creative problem-solving and aren't afraid to try new approaches.",
+  },
+  {
+    icon: Users,
+    title: "Teamwork",
+    description:
+      "We believe that together we can achieve more than any individual alone.",
+  },
+  {
+    icon: Heart,
+    title: "Gracious Professionalism",
+    description:
+      "We compete with integrity, respect our peers, and support our community.",
+  },
+];
+
+const awards = [
+  { name: "Inspire Award", event: "State Championship 2024", year: "2024" },
+  { name: "Design Award", event: "Regional Championship", year: "2024" },
+  { name: "Think Award", event: "League Tournament", year: "2023" },
+  { name: "Connect Award", event: "Regional Qualifier", year: "2023" },
+  { name: "Motivate Award", event: "State Championship", year: "2022" },
+  { name: "Control Award", event: "League Tournament", year: "2022" },
+];
+
+const timeline = [
+  {
+    year: "2019",
+    title: "Team Founded",
+    description: "Despicable Machines was founded with 6 students and a dream.",
+  },
+  {
+    year: "2020",
+    title: "First Competition",
+    description: "Competed in our first FTC season, learning the ropes.",
+  },
+  {
+    year: "2021",
+    title: "First Award",
+    description: "Won our first competition award - the Connect Award.",
+  },
+  {
+    year: "2022",
+    title: "State Championship",
+    description: "Qualified for and competed in the State Championship.",
+  },
+  {
+    year: "2023",
+    title: "Outreach Expansion",
+    description: "Launched our community outreach program, reaching 500+ students.",
+  },
+  {
+    year: "2024",
+    title: "Inspire Award",
+    description: "Won the prestigious Inspire Award at the State Championship.",
+  },
+];
+
+const mentors = [
+  {
+    name: "John Smith",
+    role: "Lead Mentor",
+    bio: "Mechanical engineer with 15 years of industry experience.",
+  },
+  {
+    name: "Sarah Johnson",
+    role: "Programming Mentor",
+    bio: "Software developer passionate about teaching the next generation.",
+  },
+  {
+    name: "Michael Chen",
+    role: "Business Mentor",
+    bio: "Marketing professional helping with outreach and sponsorships.",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      <PageHero
+        label="About Us"
+        title="Meet Despicable Machines"
+        description="We are a dedicated team of students, mentors, and volunteers passionate about robotics, STEM education, and making a positive impact in our community."
+      />
+
+      {/* Mission Section */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <SectionHeader
+                label="Our Mission"
+                title="Inspiring Through Innovation"
+                align="left"
+              />
+              <p className="text-muted-foreground text-pretty">
+                Despicable Machines exists to inspire students to explore STEM
+                fields through hands-on robotics experiences. We believe that
+                building robots isn&apos;t just about engineering - it&apos;s about
+                developing critical thinking, teamwork, and leadership skills
+                that will serve our members throughout their lives.
+              </p>
+              <p className="mt-4 text-muted-foreground text-pretty">
+                Beyond competition, we are committed to sharing our passion with
+                our community through outreach events, mentoring younger teams,
+                and promoting STEM education in underserved areas.
+              </p>
+            </div>
+            <div className="rounded-3xl bg-primary/10 p-8 lg:p-12">
+              <blockquote className="text-lg italic text-foreground">
+                &quot;Our goal is not just to build great robots, but to build great
+                people who will go on to change the world.&quot;
+              </blockquote>
+              <p className="mt-4 font-display font-semibold text-primary">
+                - Team Motto
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 sm:py-28 bg-muted">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            label="Our Values"
+            title="What Drives Us"
+            description="These core values guide everything we do, both on and off the competition field."
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {values.map((value) => (
+              <Card key={value.title} className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                    <value.icon className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-semibold">
+                    {value.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground text-pretty">
+                    {value.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            label="Our Journey"
+            title="Team History"
+            description="From humble beginnings to where we are today."
+          />
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-4 top-0 h-full w-0.5 bg-border md:left-1/2 md:-translate-x-1/2" />
+            
+            <div className="space-y-8">
+              {timeline.map((item, index) => (
+                <div
+                  key={item.year}
+                  className={cn(
+                    "relative flex items-start gap-6 md:gap-12",
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  )}
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground md:left-1/2 md:-translate-x-1/2">
+                    <Calendar className="h-4 w-4" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className={cn(
+                    "ml-16 md:ml-0 md:w-1/2",
+                    index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
+                  )}>
+                    <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
+                      {item.year}
+                    </span>
+                    <h3 className="mt-2 font-display text-xl font-semibold">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1 text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards Section */}
+      <section className="py-20 sm:py-28 bg-accent text-accent-foreground">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            label="Recognition"
+            title="Awards & Achievements"
+            description="We're proud of what our team has accomplished over the years."
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {awards.map((award, index) => (
+              <div
+                key={index}
+                className="rounded-xl bg-accent-foreground/5 p-6 border border-accent-foreground/10"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary">
+                    <Award className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold">{award.name}</h3>
+                    <p className="text-sm text-accent-foreground/70">
+                      {award.event}
+                    </p>
+                    <p className="text-xs text-accent-foreground/50 mt-1">
+                      {award.year}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/awards"
+              className={cn(buttonVariants(), "bg-primary text-primary-foreground")}
+            >
+              View All Awards
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mentors Section */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            label="Leadership"
+            title="Our Mentors"
+            description="Dedicated professionals who volunteer their time to guide our team."
+          />
+          <div className="grid gap-8 md:grid-cols-3">
+            {mentors.map((mentor) => (
+              <Card key={mentor.name}>
+                <CardContent className="p-6 text-center">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-secondary/10">
+                    <span className="font-display text-2xl font-bold text-secondary">
+                      {mentor.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-semibold">
+                    {mentor.name}
+                  </h3>
+                  <p className="text-sm text-primary font-medium">
+                    {mentor.role}
+                  </p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {mentor.bio}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/team"
+              className={cn(buttonVariants({ variant: "secondary" }))}
+            >
+              Meet the Full Team
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
