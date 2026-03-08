@@ -324,9 +324,7 @@ export default function TeamPage() {
             Interested in Joining Our Team?
           </h2>
           <p className="mt-6 text-lg text-accent-foreground/80">
-            We&apos;re always looking for passionate students who want to learn
-            about robotics, engineering, and teamwork. Reach out to learn more
-            about how to get involved!
+            We are always looking for mentors and sponsors who want to support students passionate about engineering, programming, and robotics. Your support helps our FIRST Tech Challenge team build better robots, expand STEM outreach, and give students hands-on experience with real engineering and teamwork. If you're interested in getting involved, we’d love to connect.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className={cn(buttonVariants({ size: "lg" }))}>

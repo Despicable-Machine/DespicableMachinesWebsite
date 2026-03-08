@@ -22,14 +22,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "team@despicablemachines.org",
-    href: "mailto:team@despicablemachines.org",
+    value: "despicablemachinebhs@gmail.com",
+    href: "mailto:despicablemachinebhs@gmail.com",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "Central High School, Anytown, USA",
-    href: "#",
+    value: "Barrington Highschool, Barrington, IL",
+    href: "https://bhs.barrington220.org/",
   },
   {
     icon: Phone,
@@ -56,7 +56,7 @@ const socialLinks = [
     icon: Github,
     name: "GitHub",
     handle: "despicablemachines",
-    href: "#",
+    href: "https://github.com/Despicable-Machine",
   },
 ];
 
@@ -127,6 +127,8 @@ export default function ContactPage() {
                       {item.href !== "#" ? (
                         <a
                           href={item.href}
+                          target = "_blank"
+                          rel = "noopener nonreferrer"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           {item.value}
@@ -148,6 +150,8 @@ export default function ContactPage() {
                   {socialLinks.map((social) => (
                     <a
                       key={social.name}
+                      target = "_blank"
+                      rel = "noopener nonreferrer"
                       href={social.href}
                       className="flex items-center gap-4 rounded-xl bg-muted p-4 transition-colors hover:bg-muted/80"
                     >
@@ -306,7 +310,7 @@ export default function ContactPage() {
                 align="left"
               />
               <p className="text-muted-foreground text-pretty">
-                Despicable Machines is based at Central High School in Anytown,
+                Despicable Machines is based at Barrington High School in Barrington Illinois,
                 USA. We meet regularly during the school year for build sessions,
                 programming workshops, and outreach planning.
               </p>

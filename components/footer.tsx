@@ -46,7 +46,7 @@ export function Footer() {
                   Despicable Machines
                 </span>
                 <p className="text-sm text-accent-foreground/70">
-                  FTC Team #00000
+                  FTC Team #6200
                 </p>
               </div>
             </div>

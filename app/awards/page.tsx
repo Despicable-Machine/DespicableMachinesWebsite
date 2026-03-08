@@ -13,28 +13,29 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const majorAwards = [
+
   {
-    name: "Inspire Award",
-    event: "State Championship",
+    name: "Cooper Division Semi-Finalist",
+    event: "State Tournament",
     year: "2024",
     description:
-      "The most prestigious award in FTC, recognizing a team that embodies the FIRST philosophy and is a strong ambassador for FIRST.",
-    icon: Sparkles,
-  },
-  {
-    name: "Design Award",
-    event: "Regional Championship",
-    year: "2024",
-    description:
-      "Recognizes design elements of the robot that are both functional and aesthetic, with carefully thought-out engineering.",
+      "Placing as a semi-finalist at the state championship shows strong teamwork, strategy, and consistent robot performance against some of the top teams in the state.",
     icon: Star,
   },
   {
-    name: "Think Award",
-    event: "League Tournament",
-    year: "2023",
+    name: "Motivate Award Winner",
+    event: "State Tournament",
+    year: "2024",
     description:
-      "Honors a team that best reflects the journey of the engineering design process through their engineering portfolio.",
+      "The Motivate award recognizes a team that inspires others, shares their passion for STEM, and positively impacts their community.",
+    icon: Award,
+  },
+  {
+    name: "Inspire Award Winner",
+    event: "Regional Tournament",
+    year: "2024",
+    description:
+      "The Inspire award recognizes a team that excels in innovation, teamwork, and community impact, serving as a role model for other teams.",
     icon: Award,
   },
 ];
@@ -43,53 +44,53 @@ const allAwards = [
   {
     season: "2025-26",
     awards: [
-      // Add your awards here like this:
-      // { name: "Award Name", event: "Event Name", date: "Month Year" },
+      { name: "Connect Award Finalist", event: "State Tournament", date: "2026" },
+      { name: "Think Award Winner", event: "Regional Tournament", date: "2026" },
+      { name: "Semi-Finalist", event: "Regional Tournament", date: "2026" },
+      { name: "State-Qualifier", event: "Regional Tournament", date: "2026" },
     ],
   },
   {
     season: "2024-25",
     awards: [
-      { name: "Inspire Award", event: "State Championship", date: "April 2025" },
-      { name: "Design Award", event: "Regional Championship", date: "March 2025" },
-      { name: "Think Award", event: "League Tournament #3", date: "February 2025" },
-      { name: "Connect Award", event: "League Tournament #2", date: "February 2025" },
+      { name: "Control Award Winner", event: "Regional Tournament", date: "2025" },
+      { name: "Alliance Captain", event: "Regional Tournament", date: "2025" },
     ],
   },
   {
     season: "2023-24",
     awards: [
-      { name: "Think Award", event: "League Tournament", date: "February 2023" },
-      { name: "Motivate Award", event: "State Championship", date: "April 2023" },
-      { name: "Control Award", event: "League Tournament", date: "January 2023" },
+      { name: "Inspire Award Winner", event: "Regional Tournament", date: "2024" },
+      { name: "Motivate Award Winner", event: "State Tournament", date: "2024" },
+      { name: "Cooper Division Semi-Finalist", event: "State Tournament", date: "2024" },
+      { name: "State-Qualifier", event: "Regional Tournament", date: "2024" },
     ],
   },
   {
     season: "2022-23",
     awards: [
-      { name: "Connect Award", event: "Regional Qualifier", date: "March 2022" },
-      { name: "Design Award", event: "League Tournament", date: "February 2022" },
+      { name: "Control Award Winner", event: "Regional Tournament", date: "2023" },
+      { name: "Inspire Award Semi-Finalist", event: "Regional Tournament", date: "2023" },
+      { name: "Think Award Semi-Finalist", event: "State Tournament", date: "2023" },
+      { name: "State-Qualifier", event: "Regional Tournament", date: "2023" },
     ],
   },
   {
     season: "2021-22",
     awards: [
-      { name: "Motivate Award", event: "League Tournament", date: "February 2021" },
-    ],
-  },
-  {
-    season: "2020-21",
-    awards: [
-      { name: "Connect Award", event: "Virtual Competition", date: "March 2021" },
+      { name: "Think Award Winner", event: "Regional Tournament", date: "2022" },
+      { name: "Think Award Finalist", event: "State Tournament", date: "2022" },
+      { name: "Finalist Alliance Captain", event: "Regional Tournament", date: "2022" },
+      { name: "State-Qualifier", event: "Regional Tournament", date: "2022" },
     ],
   },
 ];
 
 const achievements = [
-  { value: "12+", label: "Total Awards" },
-  { value: "3", label: "State Appearances" },
+  { value: "18", label: "Total Awards" },
+  { value: "4", label: "State Appearances" },
   { value: "1", label: "Inspire Award" },
-  { value: "5", label: "Seasons Competing" },
+  { value: "6", label: "Seasons Competing" },
 ];
 
 
