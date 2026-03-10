@@ -42,7 +42,7 @@ export function Header() {
               </span>
             </div>
             <span className="hidden font-display text-xl font-bold text-accent-foreground sm:block">
-              Despicable Machines
+              Despicable Machine
             </span>
           </Link>
 

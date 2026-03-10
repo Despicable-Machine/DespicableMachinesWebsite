@@ -320,12 +320,12 @@ export default function ContactPage() {
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex justify-between">
-                    <span>Build Sessions</span>
-                    <span>Mon, Wed, Fri 3:30-6:00 PM</span>
+                    <span>General Workshop</span>
+                    <span>Mon, Tue, Thu 3:30-4:30 PM</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Programming</span>
-                    <span>Tue, Thu 3:30-5:30 PM</span>
+                    <span>Build Sessions</span>
+                    <span>Wed, Fri 4:15-6:15 PM</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Saturday Build</span>
