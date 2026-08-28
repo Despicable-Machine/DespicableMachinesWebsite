@@ -8,20 +8,21 @@ import { cn } from "@/lib/utils";
 
 const leadership = [
   {
-    name: "Naya Horn",
-    role: "Team Captain",
-    grade: "11th Grade",
-    bio: "Leads the team with passion and drives our strategic direction. Specializes in project management and team coordination.",
-    initials: "NH",
-  },
-  {
     name: "Hetanshu Panditi",
-    role: "Co-Captain",
+    role: "Team Captain",
     grade: "11th Grade",
     bio: "Oversees day-to-day operations and ensures smooth collaboration between all sub-teams.",
     initials: "HP",
     image: "/images/team/HetanshuPanditi.JPEG",
   },
+  {
+    name: "Naya Horn",
+    role: "Co-Captain",
+    grade: "11th Grade",
+    bio: "Leads the team with passion and drives our strategic direction. Specializes in project management and team coordination.",
+    initials: "NH",
+  },
+  
 ];
 
 const programmingTeam = [
@@ -38,8 +39,16 @@ const programmingTeam = [
 
 const mechanicalTeam = [
   {
-    name: "Naya Horn",
+    name: "Hetanshu Panditi",
     role: "Lead Builder",
+    grade: "11th Grade",
+    bio: "Hands-on builder with expertise in assembly, fabrication, and mechanical troubleshooting.",
+    initials: "HP",
+    image: "/images/team/HetanshuPanditi.JPEG",
+  },
+  {
+    name: "Naya Horn",
+    role: "CAD Designer/Builder",
     grade: "11th Grade",
     bio: "Mechanical design expert with experience in CAD and precision manufacturing.",
     initials: "NH",
@@ -52,14 +61,7 @@ const mechanicalTeam = [
     initials: "DL",
     image: "/images/team/DrakeDeleon.jpg",
   },
-  {
-    name: "Hetanshu Panditi",
-    role: "Build Specialist",
-    grade: "11th Grade",
-    bio: "Hands-on builder with expertise in assembly, fabrication, and mechanical troubleshooting.",
-    initials: "HP",
-    image: "/images/team/HetanshuPanditi.JPEG",
-  },
+  
 ];
 
 const outreachTeam = [

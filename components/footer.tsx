@@ -26,10 +26,12 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-                <span className="font-display text-xl font-bold text-primary-foreground">
-                  DM
-                </span>
+              <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-primary">
+                <img
+                  src="/images/Misc/Icon.png"
+                  alt="The Despicable Machine icon"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div>
                 <span className="font-display text-xl font-bold">
