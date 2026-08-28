@@ -34,41 +34,26 @@ const values = [
 ];
 
 const awards = [
-  { name: "Inspire Award", event: "State Championship 2024", year: "2024" },
-  { name: "Design Award", event: "Regional Championship", year: "2024" },
-  { name: "Think Award", event: "League Tournament", year: "2023" },
-  { name: "Connect Award", event: "Regional Qualifier", year: "2023" },
-  { name: "Motivate Award", event: "State Championship", year: "2022" },
-  { name: "Control Award", event: "League Tournament", year: "2022" },
+  {
+    name: "Cooper Division Semi-Finalist",
+    event: "State Tournament",
+    year: "2024",
+  },
+  { name: "Motivate Award Winner", event: "State Tournament", year: "2024" },
+  { name: "Inspire Award Winner", event: "Regional Tournament", year: "2024" },
 ];
 
 
 
-const mentors = [
-  {
-    name: "John Smith",
-    role: "Lead Mentor",
-    bio: "Mechanical engineer with 15 years of industry experience.",
-  },
-  {
-    name: "Sarah Johnson",
-    role: "Programming Mentor",
-    bio: "Software developer passionate about teaching the next generation.",
-  },
-  {
-    name: "Michael Chen",
-    role: "Business Mentor",
-    bio: "Marketing professional helping with outreach and sponsorships.",
-  },
-];
+
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        label="About Us"
-        title="Meet Despicable Machines"
-        description="We are a dedicated team of students, mentors, and volunteers passionate about robotics, STEM education, and making a positive impact in our community."
+        label="2026-2027"
+        title="BIOBUZZ"
+        description="We are a dedicated team of students passionate about robotics, STEM education, and making a positive impact in our community as we build for the 2026-2027 BIOBUZZ season."
       />
 
       {/* Mission Section */}
@@ -82,16 +67,14 @@ export default function AboutPage() {
                 align="left"
               />
               <p className="text-muted-foreground text-pretty">
-                Despicable Machines exists to inspire students to explore STEM
-                fields through hands-on robotics experiences. We believe that
-                building robots isn&apos;t just about engineering - it&apos;s about
-                developing critical thinking, teamwork, and leadership skills
-                that will serve our members throughout their lives.
+                The Despicable Machine exists to inspire students to explore STEM
+                through hands-on robotics experiences. We believe that building
+                robots is about more than engineering. It is also about learning
+                how to solve problems, work with others, and grow as leaders.
               </p>
               <p className="mt-4 text-muted-foreground text-pretty">
-                Beyond competition, we are committed to sharing our passion with
-                our community through outreach events, mentoring younger teams,
-                and promoting STEM education in underserved areas.
+                We focus on building strong technical skills, leadership, and
+                teamwork while helping students grow as confident problem-solvers.
               </p>
             </div>
             <div className="rounded-3xl bg-primary/10 p-8 lg:p-12">
@@ -100,7 +83,7 @@ export default function AboutPage() {
                 people who will go on to change the world.&quot;
               </blockquote>
               <p className="mt-4 font-display font-semibold text-primary">
-                - Team Motto
+                Team Motto
               </p>
             </div>
           </div>
@@ -172,51 +155,6 @@ export default function AboutPage() {
               className={cn(buttonVariants(), "bg-primary text-primary-foreground")}
             >
               View All Awards
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Mentors Section */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="Leadership"
-            title="Our Mentors"
-            description="Dedicated professionals who volunteer their time to guide our team."
-          />
-          <div className="grid gap-8 md:grid-cols-3">
-            {mentors.map((mentor) => (
-              <Card key={mentor.name}>
-                <CardContent className="p-6 text-center">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-secondary/10">
-                    <span className="font-display text-2xl font-bold text-secondary">
-                      {mentor.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 font-display text-lg font-semibold">
-                    {mentor.name}
-                  </h3>
-                  <p className="text-sm text-primary font-medium">
-                    {mentor.role}
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {mentor.bio}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/team"
-              className={cn(buttonVariants({ variant: "secondary" }))}
-            >
-              Meet the Full Team
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>

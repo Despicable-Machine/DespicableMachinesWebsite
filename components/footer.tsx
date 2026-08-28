@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Instagram, Youtube, Github, Mail } from "lucide-react";
 
 const footerLinks = {
   team: [
@@ -11,8 +10,6 @@ const footerLinks = {
   competition: [
     { name: "Matches", href: "/matches" },
     { name: "About FTC", href: "/about-ftc" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Blog", href: "/blog" },
   ],
   connect: [
     { name: "Contact Us", href: "/contact" },
@@ -20,13 +17,6 @@ const footerLinks = {
     { name: "Outreach", href: "/outreach" },
   ],
 };
-
-const socialLinks = [
-  { name: "Instagram", href: "#", icon: Instagram },
-  { name: "YouTube", href: "#", icon: Youtube },
-  { name: "GitHub", href: "#", icon: Github },
-  { name: "Email", href: "mailto:team@despicablemachines.org", icon: Mail },
-];
 
 export function Footer() {
   return (
@@ -43,7 +33,7 @@ export function Footer() {
               </div>
               <div>
                 <span className="font-display text-xl font-bold">
-                  Despicable Machines
+                  The Despicable Machine
                 </span>
                 <p className="text-sm text-accent-foreground/70">
                   FTC Team #6200
@@ -54,18 +44,6 @@ export function Footer() {
               Building robots, inspiring minds, and making a difference in our
               community through FIRST Tech Challenge.
             </p>
-            <div className="mt-6 flex gap-4">
-              {socialLinks.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="rounded-full bg-accent-foreground/10 p-2 transition-colors hover:bg-primary hover:text-primary-foreground"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-5 w-5" />
-                </Link>
-              ))}
-            </div>
           </div>
 
           {/* Links */}
@@ -128,7 +106,7 @@ export function Footer() {
         <div className="mt-12 border-t border-accent-foreground/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-accent-foreground/50">
-              &copy; {new Date().getFullYear()} Despicable Machines. All rights
+              &copy; {new Date().getFullYear()} The Despicable Machine. All rights
               reserved.
             </p>
             <p className="text-sm text-accent-foreground/50">

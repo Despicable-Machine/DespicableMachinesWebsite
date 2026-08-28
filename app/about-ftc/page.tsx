@@ -134,7 +134,7 @@ export default function AboutFTCPage() {
               </p>
               <p className="mt-4 text-muted-foreground text-pretty">
                 Each year, teams are presented with a new game theme and
-                challenge. The 2024-25 season theme is &quot;DECODE&quot; where robots must
+                challenge. The 2026-2027 season theme is &quot;BIOBUZZ&quot;, where robots must
                 navigate strategic challenges in this exciting new game.
               </p>
               <p className="mt-4 text-muted-foreground text-pretty">
@@ -353,7 +353,7 @@ export default function AboutFTCPage() {
             Ready to Learn More About Our Team?
           </h2>
           <p className="mt-6 text-lg text-accent-foreground/80">
-            See how Despicable Machines brings FTC to life through competition,
+            See how The Despicable Machine brings FTC to life through competition,
             innovation, and community engagement.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">

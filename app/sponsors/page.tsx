@@ -19,6 +19,19 @@ import { cn } from "@/lib/utils";
 
 const sponsorTiers = [
   {
+    name: "Diamond",
+    amount: "$5,000+",
+    icon: Gem,
+    color: "primary",
+    benefits: [
+      "Premier logo placement",
+      "Featured on all major team materials",
+      "Priority recognition on website and social media",
+      "Invitation to team events and presentations",
+      "Quarterly impact reports",
+    ],
+  },
+  {
     name: "Platinum",
     amount: "$2,500+",
     icon: Gem,
@@ -71,28 +84,14 @@ const sponsorTiers = [
 ];
 
 const currentSponsors = {
-  platinum: [
-    { name: "TechCorp Industries", logo: "TC" },
-    { name: "Innovation Labs", logo: "IL" },
-  ],
   gold: [
-    { name: "Engineering Solutions", logo: "ES" },
-    { name: "Future Makers Inc", logo: "FM" },
-    { name: "STEM Foundation", logo: "SF" },
+    { name: "Main Street Smiles", logo: "MS" },
   ],
   silver: [
-    { name: "Local Hardware Store", logo: "LH" },
-    { name: "Community Bank", logo: "CB" },
-    { name: "Smith & Associates", logo: "SA" },
-    { name: "Tech Services LLC", logo: "TS" },
+    { name: "Swiss Automations", logo: "SA" },
+    { name: "Coil Craft", logo: "CB" },
   ],
   bronze: [
-    { name: "Johnson Family", logo: "JF" },
-    { name: "Chen Family", logo: "CF" },
-    { name: "Williams Family", logo: "WF" },
-    { name: "Martinez Family", logo: "MF" },
-    { name: "Local Pizza Shop", logo: "LP" },
-    { name: "Downtown Cafe", logo: "DC" },
   ],
 };
 
@@ -141,6 +140,19 @@ export default function SponsorsPage() {
             description="These organizations and individuals make our work possible."
           />
 
+          {/* Diamond Sponsors */}
+          <div className="mb-12">
+            <div className="flex items-center gap-2 mb-6">
+              <Gem className="h-5 w-5 text-primary" />
+              <h3 className="font-display text-lg font-semibold">
+                Diamond Sponsors
+              </h3>
+            </div>
+            <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/5 p-6 text-center text-muted-foreground">
+              No diamond sponsors yet.
+            </div>
+          </div>
+
           {/* Platinum Sponsors */}
           <div className="mb-12">
             <div className="flex items-center gap-2 mb-6">
@@ -149,20 +161,8 @@ export default function SponsorsPage() {
                 Platinum Sponsors
               </h3>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {currentSponsors.platinum.map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="flex items-center gap-4 rounded-2xl bg-primary/5 border border-primary/20 p-6"
-                >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary text-primary-foreground font-display text-xl font-bold">
-                    {sponsor.logo}
-                  </div>
-                  <span className="font-display text-lg font-semibold">
-                    {sponsor.name}
-                  </span>
-                </div>
-              ))}
+            <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/5 p-6 text-center text-muted-foreground">
+              No platinum sponsors yet.
             </div>
           </div>
 
@@ -222,15 +222,8 @@ export default function SponsorsPage() {
                 Bronze Sponsors
               </h3>
             </div>
-            <div className="flex flex-wrap gap-3">
-              {currentSponsors.bronze.map((sponsor) => (
-                <span
-                  key={sponsor.name}
-                  className="rounded-full bg-muted px-4 py-2 text-sm font-medium"
-                >
-                  {sponsor.name}
-                </span>
-              ))}
+            <div className="rounded-2xl border border-dashed border-secondary/30 bg-secondary/5 p-6 text-center text-muted-foreground">
+              No bronze sponsors yet.
             </div>
           </div>
         </div>
@@ -244,12 +237,12 @@ export default function SponsorsPage() {
             title="Sponsorship Tiers"
             description="Choose a sponsorship level that works for you and help us achieve our goals."
           />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
             {sponsorTiers.map((tier) => (
               <Card
                 key={tier.name}
                 className={cn(
-                  tier.name === "Platinum" && "ring-2 ring-primary"
+                  tier.name === "Diamond" && "ring-2 ring-primary"
                 )}
               >
                 <CardContent className="p-6">
@@ -344,7 +337,7 @@ export default function SponsorsPage() {
                 Invest in the Next Generation
               </h2>
               <p className="mt-6 text-secondary-foreground/80 text-pretty">
-                By sponsoring Despicable Machines, you&apos;re not just supporting a
+                By sponsoring The Despicable Machine, you&apos;re not just supporting a
                 robotics team - you&apos;re investing in the engineers, scientists,
                 and leaders of tomorrow.
               </p>
@@ -373,53 +366,32 @@ export default function SponsorsPage() {
                 donation. We&apos;re happy to work with you to find a partnership
                 that meets your goals.
               </p>
-              <Link
-                href="/contact"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "mt-6 bg-primary text-primary-foreground"
-                )}
-              >
-                Contact Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/contact"
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "bg-primary text-primary-foreground"
+                  )}
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="https://drive.google.com/file/d/1VlR2nIzO-vU0lVpxxMnMDbWGAkj_X9BT/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={cn(
+                    buttonVariants({ size: "lg", variant: "secondary" }),
+                    "bg-secondary-foreground/10 text-secondary-foreground border border-secondary-foreground/20"
+                  )}
+                >
+                  Sponsor Packet
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* In-Kind Donations */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <SectionHeader
-            label="Other Ways to Help"
-            title="In-Kind Donations"
-            description="Can't make a financial contribution? We also accept donated materials, services, and expertise."
-          />
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[
-              "Robot parts & materials",
-              "3D printing services",
-              "Professional mentorship",
-              "Workspace or storage",
-              "Transportation help",
-              "Marketing services",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-lg bg-muted p-4 text-sm font-medium"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/contact"
-            className={cn(buttonVariants({ variant: "secondary" }), "mt-8")}
-          >
-            Inquire About Donations
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
         </div>
       </section>
     </>

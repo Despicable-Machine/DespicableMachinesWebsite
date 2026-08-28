@@ -6,7 +6,7 @@ export default function MatchesPage() {
       <PageHero
         label="Competition"
         title="Matches & Results"
-        description="Track our competition journey with match results, upcoming events, and team rankings throughout the DECODE season."
+        description="Track our competition journey with match results, upcoming events, and team rankings throughout the BIOBUZZ 2026-2027 season."
       />
 
       {/* FTC API Integration Placeholder */}

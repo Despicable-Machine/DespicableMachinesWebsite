@@ -25,5 +25,22 @@
     "tailwindcss": "^3.4.17",
     "postcss": "^8.5.3",
     "autoprefixer": "^10.4.21"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theetruej/DespicableMachinesWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/theetruej/DespicableMachinesWebsite/issues"
+  },
+  "homepage": "https://github.com/theetruej/DespicableMachinesWebsite#readme"
 }

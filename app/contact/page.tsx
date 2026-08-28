@@ -1,22 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  Instagram,
-  Youtube,
-  Github,
-  Send,
-  CheckCircle,
-} from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const contactInfo = [
   {
@@ -31,12 +18,7 @@ const contactInfo = [
     value: "Barrington Highschool, Barrington, IL",
     href: "https://bhs.barrington220.org/",
   },
-  {
-    icon: Phone,
-    title: "Phone",
-    value: "Contact via email for fastest response",
-    href: "#",
-  },
+  
 ];
 
 const socialLinks = [
@@ -46,54 +28,9 @@ const socialLinks = [
     handle: "@despicablemachines",
     href: "#",
   },
-  {
-    icon: Youtube,
-    name: "YouTube",
-    handle: "Despicable Machines FTC",
-    href: "#",
-  },
-  {
-    icon: Github,
-    name: "GitHub",
-    handle: "despicablemachines",
-    href: "https://github.com/Despicable-Machine",
-  },
-];
-
-const inquiryTypes = [
-  "General Inquiry",
-  "Sponsorship",
-  "Outreach Request",
-  "Mentorship",
-  "Media/Press",
-  "Other",
 ];
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    inquiryType: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real app, this would send the form data to a server
-    setSubmitted(true);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
 
   return (
     <>
@@ -103,7 +40,7 @@ export default function ContactPage() {
         description="Have questions about our team, interested in sponsoring, or want us at your event? We'd love to hear from you!"
       />
 
-      {/* Contact Info & Form */}
+      {/* Contact Info */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
@@ -170,131 +107,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div>
-              <Card>
-                <CardContent className="p-6 sm:p-8">
-                  {submitted ? (
-                    <div className="text-center py-12">
-                      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-                        <CheckCircle className="h-8 w-8 text-green-600" />
-                      </div>
-                      <h3 className="mt-6 font-display text-2xl font-bold">
-                        Message Sent!
-                      </h3>
-                      <p className="mt-2 text-muted-foreground">
-                        Thank you for reaching out. We&apos;ll get back to you as
-                        soon as possible.
-                      </p>
-                      <Button
-                        onClick={() => {
-                          setSubmitted(false);
-                          setFormData({
-                            name: "",
-                            email: "",
-                            inquiryType: "",
-                            message: "",
-                          });
-                        }}
-                        variant="outline"
-                        className="mt-6"
-                      >
-                        Send Another Message
-                      </Button>
-                    </div>
-                  ) : (
-                    <>
-                      <h2 className="font-display text-2xl font-bold mb-6">
-                        Send Us a Message
-                      </h2>
-                      <form onSubmit={handleSubmit} className="space-y-6">
-                        <div>
-                          <label
-                            htmlFor="name"
-                            className="block text-sm font-medium mb-2"
-                          >
-                            Your Name
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                            placeholder="John Smith"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="email"
-                            className="block text-sm font-medium mb-2"
-                          >
-                            Email Address
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                            placeholder="john@example.com"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="inquiryType"
-                            className="block text-sm font-medium mb-2"
-                          >
-                            Inquiry Type
-                          </label>
-                          <select
-                            id="inquiryType"
-                            name="inquiryType"
-                            value={formData.inquiryType}
-                            onChange={handleChange}
-                            required
-                            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                          >
-                            <option value="">Select an option</option>
-                            {inquiryTypes.map((type) => (
-                              <option key={type} value={type}>
-                                {type}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="message"
-                            className="block text-sm font-medium mb-2"
-                          >
-                            Message
-                          </label>
-                          <textarea
-                            id="message"
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                            rows={5}
-                            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none"
-                            placeholder="Tell us more about your inquiry..."
-                          />
-                        </div>
-                        <Button type="submit" size="lg" className="w-full">
-                          Send Message
-                          <Send className="ml-2 h-4 w-4" />
-                        </Button>
-                      </form>
-                    </>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
@@ -310,7 +122,7 @@ export default function ContactPage() {
                 align="left"
               />
               <p className="text-muted-foreground text-pretty">
-                Despicable Machines is based at Barrington High School in Barrington Illinois,
+                The Despicable Machine is based at Barrington High School in Barrington Illinois,
                 USA. We meet regularly during the school year for build sessions,
                 programming workshops, and outreach planning.
               </p>
@@ -338,16 +150,12 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-            <div className="rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 p-8 lg:p-12 flex items-center justify-center aspect-square lg:aspect-auto lg:h-96">
-              <div className="text-center">
-                <MapPin className="mx-auto h-16 w-16 text-primary/50" />
-                <p className="mt-4 font-display text-xl font-bold text-foreground/50">
-                  Map Placeholder
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Central High School
-                </p>
-              </div>
+            <div className="rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 p-4 lg:p-6 flex items-center justify-center aspect-square lg:aspect-auto lg:h-96 overflow-hidden">
+              <img
+                src="/images/school/BHS.jpg"
+                alt="Barrington High School"
+                className="h-full w-full rounded-2xl object-cover"
+              />
             </div>
           </div>
         </div>

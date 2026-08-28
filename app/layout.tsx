@@ -15,9 +15,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Despicable Machines | FTC Robotics Team",
+  title: "The Despicable Machine | FTC Robotics Team",
   description:
-    "Welcome to Despicable Machines - a FIRST Tech Challenge robotics team dedicated to innovation, teamwork, and community outreach.",
+    "Welcome to The Despicable Machine, a FIRST Tech Challenge robotics team dedicated to innovation, teamwork, and community outreach.",
+  icons: {
+    icon: "/images/Misc/Icon.png",
+    shortcut: "/images/Misc/Icon.png",
+    apple: "/images/Misc/Icon.png",
+  },
 };
 
 export default function RootLayout({

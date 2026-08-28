@@ -21,8 +21,6 @@ const navigation = [
   { name: "Outreach", href: "/outreach" },
   { name: "Sponsors", href: "/sponsors" },
   { name: "Awards", href: "/awards" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -35,14 +33,16 @@ export function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-              <span className="font-display text-lg font-bold text-primary-foreground">
-                DM
-              </span>
+          <Link href="/" className="flex items-center gap-3 py-1">
+            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-accent-foreground/10 bg-primary/10 shadow-sm ring-2 ring-primary/10">
+              <img
+                src="/images/Misc/Icon.png"
+                alt="The Despicable Machine icon"
+                className="h-full w-full object-cover"
+              />
             </div>
-            <span className="hidden font-display text-xl font-bold text-accent-foreground sm:block">
-              Despicable Machine
+            <span className="hidden font-display text-lg font-bold tracking-tight text-accent-foreground sm:block sm:text-xl">
+              The Despicable Machine
             </span>
           </Link>
 

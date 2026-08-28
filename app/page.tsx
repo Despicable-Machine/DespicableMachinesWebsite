@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 
 const stats = [
   { value: "5+", label: "Years Competing" },
-  { value: "12", label: "Team Members" },
-  { value: "500+", label: "Community Hours" },
-  { value: "8", label: "Awards Won" },
+  { value: "5", label: "Team Members" },
+  { value: "200+", label: "Estimated Community Hours" },
+  { value: "3", label: "Major Awards" },
 ];
 
 const features = [
@@ -34,9 +34,21 @@ const features = [
 ];
 
 const recentResults = [
-  { event: "Regional Championship", result: "2nd Place", award: "Design Award" },
-  { event: "League Tournament #3", result: "1st Place", award: "Think Award" },
-  { event: "League Tournament #2", result: "3rd Place", award: "Connect Award" },
+  {
+    event: "State Tournament",
+    result: "Semi-Finalist",
+    award: "Cooper Division Semi-Finalist",
+  },
+  {
+    event: "State Tournament",
+    result: "Winner",
+    award: "Motivate Award",
+  },
+  {
+    event: "Regional Tournament",
+    result: "Winner",
+    award: "Inspire Award",
+  },
 ];
 
 export default function HomePage() {
@@ -62,9 +74,9 @@ export default function HomePage() {
                 <span className="text-primary">One Robot at a Time</span>
               </h1>
               <p className="mt-6 text-lg text-accent-foreground/80 max-w-xl text-pretty">
-                We are Despicable Machines - a passionate team of students
-                dedicated to innovation, teamwork, and inspiring the next
-                generation of engineers through competitive robotics.
+                We are The Despicable Machine, a group of students who care
+                deeply about building robots, learning together, and helping
+                the next generation of engineers get excited about STEM.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
@@ -91,10 +103,10 @@ export default function HomePage() {
                     <Cog className="h-12 w-12 text-primary-foreground" />
                   </div>
                   <h3 className="font-display text-2xl font-bold">
-                    2024-25 Season Robot
+                    BIOBUZZ 2026-2027
                   </h3>
                   <p className="mt-2 text-accent-foreground/70">
-                    DECODE
+                    Robot in development
                   </p>
                   <Link
                     href="/robot"
@@ -144,9 +156,9 @@ export default function HomePage() {
                 robots to compete in an alliance format against other teams.
               </p>
               <p className="mt-4 text-muted-foreground text-pretty">
-                Beyond the technical skills, FTC emphasizes Gracious
-                Professionalism - a spirit of cooperation and respect that
-                participants carry into all aspects of life.
+                Beyond the technical skills, FTC also teaches Gracious
+                Professionalism, which is all about respect, teamwork, and
+                carrying yourself with integrity both on and off the field.
               </p>
               <Link
                 href="/about-ftc"
@@ -288,9 +300,9 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="rounded-2xl bg-secondary-foreground/10 p-6 text-center">
-                <p className="font-display text-4xl font-bold">500+</p>
+                <p className="font-display text-4xl font-bold">200+</p>
                 <p className="mt-2 text-sm text-secondary-foreground/70">
-                  Volunteer Hours
+                  Estimated Community Hours
                 </p>
               </div>
               <div className="rounded-2xl bg-secondary-foreground/10 p-6 text-center">
@@ -300,9 +312,9 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="rounded-2xl bg-secondary-foreground/10 p-6 text-center">
-                <p className="font-display text-4xl font-bold">1000+</p>
+                <p className="font-display text-4xl font-bold">83</p>
                 <p className="mt-2 text-sm text-secondary-foreground/70">
-                  Students Reached
+                  FLL teams from 18 states, through a 5-week workshop
                 </p>
               </div>
               <div className="rounded-2xl bg-secondary-foreground/10 p-6 text-center">
@@ -312,38 +324,6 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sponsors Section */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="Our Sponsors"
-            title="Thank You to Our Supporters"
-            description="We couldn't do what we do without the generous support of our sponsors."
-          />
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {[1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                className="flex h-24 items-center justify-center rounded-xl border border-border bg-card p-4"
-              >
-                <span className="font-display text-lg font-semibold text-muted-foreground">
-                  Sponsor {i}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/sponsors"
-              className={cn(buttonVariants({ variant: "secondary" }))}
-            >
-              Become a Sponsor
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>
