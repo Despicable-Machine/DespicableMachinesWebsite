@@ -85,14 +85,30 @@ const sponsorTiers = [
 
 const currentSponsors = {
   gold: [
-    { name: "Main Street Smiles", logo: "MS" },
+    {
+      name: "Main Street Smiles",
+      logo: "MS",
+      image: "/images/Sponsors/MainStreetSmiles.png",
+    },
+    {
+      name: "Motorola",
+      logo: "M",
+      image: "/images/Sponsors/Motorola.png",
+    },
   ],
   silver: [
-    { name: "Swiss Automations", logo: "SA" },
-    { name: "Coil Craft", logo: "CB" },
+    {
+      name: "Swiss Automations",
+      logo: "SA",
+      image: "/images/Sponsors/SwissAutomations.jpg",
+    },
+    {
+      name: "Coil Craft",
+      logo: "CB",
+      image: "/images/Sponsors/CoilCraft.jpg",
+    },
   ],
-  bronze: [
-  ],
+  bronze: [],
 };
 
 const howFundsAreUsed = [
@@ -174,18 +190,47 @@ export default function SponsorsPage() {
                 Gold Sponsors
               </h3>
             </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {currentSponsors.gold.map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="flex items-center gap-4 rounded-xl bg-card border border-border p-4"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary font-display font-bold">
-                    {sponsor.logo}
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {currentSponsors.gold.map((sponsor) => {
+                const imageSizeClass =
+                  sponsor.name === "Motorola"
+                    ? "h-20 w-24"
+                    : sponsor.name === "Main Street Smiles"
+                      ? "h-16 w-[9.5rem]"
+                      : "h-12 w-12";
+                const imageContainerClass =
+                  sponsor.name === "Main Street Smiles"
+                    ? "overflow-hidden rounded-full bg-white/80"
+                    : "overflow-hidden bg-transparent";
+
+                return (
+                  <div
+                    key={sponsor.name}
+                    className="flex items-center justify-start gap-4 rounded-xl border border-border bg-card p-4 text-left"
+                  >
+                    <div
+                      className={cn(
+                        "flex shrink-0 items-center justify-center",
+                        imageSizeClass,
+                        imageContainerClass
+                      )}
+                    >
+                      {sponsor.image ? (
+                        <img
+                          src={sponsor.image}
+                          alt={sponsor.name}
+                          className="h-full w-full object-contain"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center text-primary font-display font-bold">
+                          {sponsor.logo}
+                        </div>
+                      )}
+                    </div>
+                    <span className="font-medium">{sponsor.name}</span>
                   </div>
-                  <span className="font-medium">{sponsor.name}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -203,8 +248,18 @@ export default function SponsorsPage() {
                   key={sponsor.name}
                   className="flex items-center gap-3 rounded-lg bg-muted p-3"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-secondary/10 text-secondary text-sm font-bold">
-                    {sponsor.logo}
+                  <div className="flex h-10 w-10 shrink-0 overflow-hidden rounded border border-border bg-secondary/10">
+                    {sponsor.image ? (
+                      <img
+                        src={sponsor.image}
+                        alt={sponsor.name}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center text-secondary text-sm font-bold">
+                        {sponsor.logo}
+                      </div>
+                    )}
                   </div>
                   <span className="text-sm font-medium truncate">
                     {sponsor.name}

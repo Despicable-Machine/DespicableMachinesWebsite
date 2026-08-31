@@ -71,6 +71,7 @@ const outreachTeam = [
     grade: "12th Grade",
     bio: "Coordinates all community events, fundraisinng, and manages our outreach initiatives.",
     initials: "VN",
+    image: "/images/team/VarunNair.jpg",
   },
 ];
 
