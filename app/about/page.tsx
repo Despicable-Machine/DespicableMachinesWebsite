@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { ArrowRight, Target, Lightbulb, Users, Heart, Award } from "lucide-react";
+import {
+  ArrowRight,
+  Handshake,
+  Target,
+  Lightbulb,
+  Sparkles,
+  Users,
+  Heart,
+  Award,
+} from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,6 +50,27 @@ const awards = [
   },
   { name: "Motivate Award Winner", event: "State Tournament", year: "2024" },
   { name: "Inspire Award Winner", event: "Regional Tournament", year: "2024" },
+];
+
+const gearsProgram = [
+  {
+    title: "Pairing",
+    description:
+      "Each experienced member is matched with a new member to build a supportive and hands-on learning connection.",
+    icon: Handshake,
+  },
+  {
+    title: "Mentorship",
+    description:
+      "New members learn the basics of design, fabrication, coding, and team workflow through direct guidance.",
+    icon: Users,
+  },
+  {
+    title: "Growth",
+    description:
+      "As members gain confidence, they take on more responsibility and help mentor the next wave of teammates.",
+    icon: Sparkles,
+  },
 ];
 
 
@@ -86,6 +116,34 @@ export default function AboutPage() {
                 Team Motto
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GEARS Program */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            label="Team Culture"
+            title="GEARS Mentorship Program"
+            description="One of our biggest focuses is helping new members find their place and build confidence through GEARS, our one-on-one mentorship program. We pair each new member with a veteran teammate who can answer questions, share hands-on FTC experience, and guide them through the skills they need to contribute. Beyond learning design, fabrication, coding, and teamwork, GEARS helps new members feel supported as they grow into confident members and future mentors themselves."
+          />
+          <div className="grid gap-6 md:grid-cols-3">
+            {gearsProgram.map((item) => (
+              <Card key={item.title}>
+                <CardContent className="p-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="mt-5 font-display text-xl font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground text-pretty">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

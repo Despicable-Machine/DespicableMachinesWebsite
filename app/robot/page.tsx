@@ -1,31 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Cog, Users, Sparkles, Handshake } from "lucide-react";
+import { ArrowRight, Cog } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Card, CardContent } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-const gearsProgram = [
-  {
-    title: "Pairing",
-    description:
-      "Each experienced member is matched with a new member to build a supportive and hands-on learning connection.",
-    icon: Handshake,
-  },
-  {
-    title: "Mentorship",
-    description:
-      "New members learn the basics of design, fabrication, coding, and team workflow through direct guidance.",
-    icon: Users,
-  },
-  {
-    title: "Growth",
-    description:
-      "As members gain confidence, they take on more responsibility and help mentor the next wave of teammates.",
-    icon: Sparkles,
-  },
-];
 
 export default function RobotPage() {
   return (
@@ -69,34 +47,6 @@ export default function RobotPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gears Program */}
-      <section className="py-20 sm:py-28 bg-muted">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="Team Culture"
-            title="Gears Program"
-            description="Every experienced member is paired with a new member to help guide learning, growth, and collaboration."
-          />
-          <div className="grid gap-6 md:grid-cols-3">
-            {gearsProgram.map((item) => (
-              <Card key={item.title}>
-                <CardContent className="p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
-                    <item.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="mt-5 font-display text-xl font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground text-pretty">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

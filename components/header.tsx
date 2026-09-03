@@ -31,10 +31,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-accent/95 backdrop-blur-sm border-b border-accent-foreground/10">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-14 items-center justify-between sm:h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 py-1">
-            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-accent-foreground/10 bg-primary/10 shadow-sm ring-2 ring-primary/10">
+          <Link href="/" className="flex items-center gap-2 py-1 sm:gap-3">
+            <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-accent-foreground/10 bg-primary/10 shadow-sm ring-2 ring-primary/10 sm:h-11 sm:w-11">
               <img
                 src="/images/Misc/Icon.png"
                 alt="The Despicable Machine icon"
@@ -58,7 +58,7 @@ export function Header() {
                 >
                   <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-foreground/10">
                     {item.name}
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                   </button>
                   <div
                     className={cn(
@@ -104,14 +104,14 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="lg:hidden rounded-lg p-2 text-accent-foreground hover:bg-accent-foreground/10"
+            className="rounded-lg p-1.5 text-accent-foreground hover:bg-accent-foreground/10 sm:p-2 lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open menu</span>
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5 sm:h-6 sm:w-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
             )}
           </button>
         </div>
@@ -136,9 +136,9 @@ export function Header() {
                     className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-accent-foreground hover:bg-accent-foreground/10"
                   >
                     {item.name}
-                    <ChevronDown
-                      className={cn(
-                        "h-4 w-4 transition-transform",
+                      <ChevronDown
+                        className={cn(
+                        "h-3.5 w-3.5 transition-transform sm:h-4 sm:w-4",
                         openDropdown === item.name && "rotate-180"
                       )}
                     />
