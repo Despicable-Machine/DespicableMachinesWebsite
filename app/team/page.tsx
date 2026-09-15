@@ -21,6 +21,7 @@ const leadership = [
     grade: "11th Grade",
     bio: "Leads the team with passion and drives our strategic direction. Specializes in project management and team coordination.",
     initials: "NH",
+    image: "/images/team/NayaHorn.jpg",
   },
   
 ];
@@ -28,11 +29,34 @@ const leadership = [
 const programmingTeam = [
   {
     name: "Jay Williams",
-    role: "Lead Programmer",
+    role: "Lead Programmer/UI UX Designer",
     grade: "11th Grade",
-    bio: "Expert in Java and autonomous programming. Leads the development of our robot's software systems.",
+    bio: "Expert in Java and autonomous programming. Leads the development of our robot's software systems and designs a polished user experience.",
     initials: "JW",
     image: "/images/team/JayWilliams.jpg",
+  },
+  {
+    name: "Ethan John",
+    role: "Programmer",
+    grade: "10th Grade",
+    bio: "Contributes to software development and helps build reliable robot controls and automation logic.",
+    initials: "EJ",
+    image: "/images/team/EthanJohn.JPG",
+  },
+  {
+    name: "Logan Tuchband",
+    role: "Programmer",
+    grade: "9th Grade",
+    bio: "Supports the programming team with software development, testing, and refining robot functionality.",
+    initials: "LT",
+    image: "/images/team/LoganTuchband.JPG",
+  },
+  {
+    name: "Evan Chaturvedi",
+    role: "Programmer",
+    grade: "9th Grade",
+    bio: "Helps develop and refine control systems while supporting the team with software testing and improvements.",
+    initials: "EC",
   },
   
 ];
@@ -52,6 +76,7 @@ const mechanicalTeam = [
     grade: "11th Grade",
     bio: "Mechanical design expert with experience in CAD and precision manufacturing.",
     initials: "NH",
+    image: "/images/team/NayaHorn.jpg",
   },
   {
     name: "Drake Deleon",
@@ -60,6 +85,13 @@ const mechanicalTeam = [
     bio: "Creates detailed 3D models and technical drawings for all robot components.",
     initials: "DL",
     image: "/images/team/DrakeDeleon.jpg",
+  },
+  {
+    name: "Nic Szela",
+    role: "Builder/Human Driver",
+    grade: "11th Grade",
+    bio: "Builds and supports the robot structure while also helping drive the robot during competition.",
+    initials: "NS",
   },
   
 ];

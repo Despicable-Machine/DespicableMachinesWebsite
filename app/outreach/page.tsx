@@ -206,7 +206,7 @@ export default function OutreachPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="https://drive.google.com/file/d/1VlR2nIzO-vU0lVpxxMnMDbWGAkj_X9BT/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lYPck_HlLTOgGW4GZlX2UQD2dABTM6dG/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className={cn(
@@ -236,7 +236,7 @@ export default function OutreachPage() {
                 We appreciate every form of support. Review our sponsor packet to learn about partnership opportunities and how your contribution helps our team grow.
               </p>
               <a
-                href="https://drive.google.com/file/d/1VlR2nIzO-vU0lVpxxMnMDbWGAkj_X9BT/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lYPck_HlLTOgGW4GZlX2UQD2dABTM6dG/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className={cn(buttonVariants({ size: "lg" }), "mt-8")}

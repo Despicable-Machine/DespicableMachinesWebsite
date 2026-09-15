@@ -433,7 +433,7 @@ export default function SponsorsPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
-                  href="https://drive.google.com/file/d/1VlR2nIzO-vU0lVpxxMnMDbWGAkj_X9BT/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1lYPck_HlLTOgGW4GZlX2UQD2dABTM6dG/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   className={cn(
