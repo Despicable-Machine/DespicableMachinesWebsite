@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { ArrowRight, Code, Cog, Users, Briefcase, GraduationCap } from "lucide-react";
+import {
+  ArrowRight,
+  Briefcase,
+  Code,
+  Cog,
+  GraduationCap,
+  Linkedin,
+  Users,
+} from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
@@ -107,6 +115,27 @@ const outreachTeam = [
   },
 ];
 
+const studentMentors = [
+  {
+    name: "Student Mentor",
+    role: "Mechanical Engineering Student",
+    detail: "University student",
+    bio: "A Barrington FTC alum who brings college experience and a familiar perspective to the team.",
+    initials: "SM",
+    linkedin: "https://www.linkedin.com/",
+  },
+];
+
+const professionalMentors = [
+  {
+    name: "Professional Mentor",
+    role: "Mechanical Engineering",
+    bio: "Shares professional engineering experience and helps students turn ideas into practical solutions.",
+    initials: "PM",
+    linkedin: "https://www.linkedin.com/",
+  },
+];
+
 
 
 interface TeamMemberCardProps {
@@ -175,6 +204,72 @@ function TeamMemberCard({
           </div>
         </div>
         <p className="mt-4 text-sm text-muted-foreground text-pretty">{bio}</p>
+      </CardContent>
+    </Card>
+  );
+}
+
+interface MentorCardProps {
+  name: string;
+  role: string;
+  bio: string;
+  initials: string;
+  detail?: string;
+  linkedin: string;
+  color?: "primary" | "secondary";
+}
+
+function MentorCard({
+  name,
+  role,
+  bio,
+  initials,
+  detail,
+  linkedin,
+  color = "primary",
+}: MentorCardProps) {
+  return (
+    <Card className="h-full">
+      <CardContent className="p-6">
+        <div className="flex items-start gap-4">
+          <div
+            className={cn(
+              "flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl",
+              color === "primary" ? "bg-primary/10" : "bg-secondary/10"
+            )}
+          >
+            <span
+              className={cn(
+                "font-display text-xl font-bold",
+                color === "primary" ? "text-primary" : "text-secondary"
+              )}
+            >
+              {initials}
+            </span>
+          </div>
+          <div className="min-w-0">
+            <h3 className="font-display text-lg font-semibold">{name}</h3>
+            <p
+              className={cn(
+                "text-sm font-medium",
+                color === "primary" ? "text-primary" : "text-secondary"
+              )}
+            >
+              {role}
+            </p>
+            {detail && <p className="text-xs text-muted-foreground">{detail}</p>}
+          </div>
+        </div>
+        <p className="mt-4 text-sm text-muted-foreground text-pretty">{bio}</p>
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+        >
+          <Linkedin className="h-4 w-4" />
+          LinkedIn
+        </a>
       </CardContent>
     </Card>
   );
@@ -284,18 +379,64 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+
+      {/* Mentors */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            label="Mentorship"
+            title="Meet Our Mentors"
+            description="Our mentors support the team with the experience, encouragement, and practical advice that help students keep growing."
+          />
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div>
+              <div className="mb-6 flex items-center gap-3">
+                <GraduationCap className="h-6 w-6 text-primary" />
+                <div>
+                  <h3 className="font-display text-2xl font-bold">Student Mentors</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Barrington FTC alumni sharing what they have learned
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-6">
+                {studentMentors.map((mentor) => (
+                  <MentorCard key={mentor.name} {...mentor} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="mb-6 flex items-center gap-3">
+                <Briefcase className="h-6 w-6 text-secondary" />
+                <div>
+                  <h3 className="font-display text-2xl font-bold">Professional Mentors</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Professionals who bring real-world experience to the shop
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-6">
+                {professionalMentors.map((mentor) => (
+                  <MentorCard key={mentor.name} {...mentor} color="secondary" />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Join Us CTA */}
       <section className="py-20 sm:py-28 bg-accent text-accent-foreground">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl text-balance">
-            Interested in Joining Our Team?
+            Want to become a mentor?
           </h2>
           <p className="mt-6 text-lg text-accent-foreground/80">
-            We are always looking for mentors and sponsors who want to support students passionate about engineering, programming, and robotics. Your support helps our FIRST Tech Challenge team build better robots, expand STEM outreach, and give students hands-on experience with real engineering and teamwork. If you're interested in getting involved, we’d love to connect.
+            We are always glad to hear from people who want to support students passionate about engineering, programming, and robotics. If you would like to share your experience with our team, we would love to hear from you.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className={cn(buttonVariants({ size: "lg" }))}>
-              Contact Us
+              Become a Mentor
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link

@@ -4,6 +4,7 @@ const footerLinks = {
   team: [
     { name: "About Us", href: "/about" },
     { name: "Team Members", href: "/team" },
+    { name: "Mentors", href: "/mentors" },
     { name: "Our Robot", href: "/robot" },
     { name: "Awards", href: "/awards" },
   ],

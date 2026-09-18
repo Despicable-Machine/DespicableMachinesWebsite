@@ -16,6 +16,7 @@ const navigation = [
     ],
   },
   { name: "Team", href: "/team" },
+  { name: "Mentors", href: "/mentors" },
   { name: "Robot", href: "/robot" },
   { name: "Matches", href: "/matches" },
   { name: "Outreach", href: "/outreach" },
