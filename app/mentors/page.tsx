@@ -13,22 +13,24 @@ import { cn } from "@/lib/utils";
 
 const studentMentors = [
   {
-    name: "Student Mentor",
-    role: "Mechanical Engineering Student",
-    detail: "University student",
-    bio: "A Barrington FTC alum who brings college experience and a familiar perspective to the team.",
-    initials: "SM",
-    linkedin: "https://www.linkedin.com/",
+    name: "Aiden Anderson",
+    role: "Undergraduate at UIUC • CS + Physics",
+    detail: "Student Mentor",
+    bio: "Aiden is a Barrington FTC alum and brings his experience in computer science and physics to support students in engineering, coding, and problem-solving.",
+    initials: "AA",
+    image: "/images/Mentors/AidenAnderson.JPG",
+    linkedin: "https://www.linkedin.com/in/aidan-anderson-189189299/",
   },
 ];
 
 const professionalMentors = [
   {
-    name: "Professional Mentor",
-    role: "Mechanical Engineering",
-    bio: "Shares professional engineering experience and helps students turn ideas into practical solutions.",
-    initials: "PM",
-    linkedin: "https://www.linkedin.com/",
+    name: "Jeff Williams",
+    role: "Business Leader | Executive",
+    bio: "Jeff shares practical leadership and business strategy insight that helps students connect technical work with growth, operations, and real-world impact.",
+    initials: "JW",
+    image: "/images/Mentors/JeffWilliams.jpeg",
+    linkedin: "https://www.linkedin.com/in/williams-jeffrey/",
   },
 ];
 
@@ -38,6 +40,7 @@ interface MentorCardProps {
   bio: string;
   initials: string;
   detail?: string;
+  image?: string;
   linkedin: string;
   color?: "primary" | "secondary";
 }
@@ -48,6 +51,7 @@ function MentorCard({
   bio,
   initials,
   detail,
+  image,
   linkedin,
   color = "primary",
 }: MentorCardProps) {
@@ -57,18 +61,22 @@ function MentorCard({
         <div className="flex items-start gap-4">
           <div
             className={cn(
-              "flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl",
+              "flex h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-border bg-muted",
               color === "primary" ? "bg-primary/10" : "bg-secondary/10"
             )}
           >
-            <span
-              className={cn(
-                "font-display text-xl font-bold",
-                color === "primary" ? "text-primary" : "text-secondary"
-              )}
-            >
-              {initials}
-            </span>
+            {image ? (
+              <img src={image} alt={name} className="h-full w-full object-cover" />
+            ) : (
+              <span
+                className={cn(
+                  "flex h-full w-full items-center justify-center font-display text-xl font-bold",
+                  color === "primary" ? "text-primary" : "text-secondary"
+                )}
+              >
+                {initials}
+              </span>
+            )}
           </div>
           <div className="min-w-0">
             <h3 className="font-display text-lg font-semibold">{name}</h3>
@@ -113,8 +121,8 @@ export default function MentorsPage() {
             <div>
               <SectionHeader
                 label="Student Mentors"
-                title="Barrington FTC Alumni"
-                description="Student mentors are Barrington FTC alumni who share what they have learned and help current members find their footing."
+                title="Student Mentors"
+                description="Student mentors are Barrington alumni or students who want to give back to the community by sharing their experience and helping current members find their footing."
                 align="left"
               />
               <div className="grid gap-6">
