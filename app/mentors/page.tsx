@@ -21,6 +21,14 @@ const studentMentors = [
     image: "/images/Mentors/AidenAnderson.JPG",
     linkedin: "https://www.linkedin.com/in/aidan-anderson-189189299/",
   },
+  {
+    name: "Cole Witek",
+    role: "Barrington High School Senior",
+    bio: "Cole is a BHS FTC alumni who is intending to study mechanical engineering. His experience in robotics and the FTC program allows him to provide build and design guidance to students.",
+    initials: "CW",
+    image: "/images/Mentors/ColeWitek.png",
+    linkedin: "https://www.linkedin.com/in/cole-witek-197215381/",
+  },
 ];
 
 const professionalMentors = [
