@@ -143,47 +143,58 @@ export default function AboutFTCPage() {
                 FIRST LEGO League Jr.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="p-6 text-center">
-                  <p className="font-display text-4xl font-bold text-primary">
-                    7-12
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Grade Levels
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-secondary/5 border-secondary/20">
-                <CardContent className="p-6 text-center">
-                  <p className="font-display text-4xl font-bold text-secondary">
-                    15
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Max Team Size
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-secondary/5 border-secondary/20">
-                <CardContent className="p-6 text-center">
-                  <p className="font-display text-4xl font-bold text-secondary">
-                    6K+
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Teams Worldwide
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="p-6 text-center">
-                  <p className="font-display text-4xl font-bold text-primary">
-                    50+
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Countries
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="space-y-4">
+              <div className="overflow-hidden rounded-3xl border border-border bg-muted/50 p-2 shadow-sm">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-background">
+                  <img
+                    src="/images/Misc/BioBuzz.webp"
+                    alt="BIOBUZZ FTC game image"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <Card className="bg-primary/5 border-primary/20">
+                  <CardContent className="p-6 text-center">
+                    <p className="font-display text-4xl font-bold text-primary">
+                      7-12
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Grade Levels
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-secondary/5 border-secondary/20">
+                  <CardContent className="p-6 text-center">
+                    <p className="font-display text-4xl font-bold text-secondary">
+                      15
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Max Team Size
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-secondary/5 border-secondary/20">
+                  <CardContent className="p-6 text-center">
+                    <p className="font-display text-4xl font-bold text-secondary">
+                      6K+
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Teams Worldwide
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-primary/5 border-primary/20">
+                  <CardContent className="p-6 text-center">
+                    <p className="font-display text-4xl font-bold text-primary">
+                      50+
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Countries
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

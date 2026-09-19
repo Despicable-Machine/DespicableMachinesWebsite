@@ -97,20 +97,23 @@ export default function HomePage() {
 
             {/* Robot Showcase Card */}
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 p-8 backdrop-blur-sm border border-accent-foreground/10">
-                <div className="flex h-full flex-col items-center justify-center text-center">
-                  <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-primary">
-                    <Cog className="h-12 w-12 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-display text-2xl font-bold">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-accent-foreground/10 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-sm shadow-lg">
+                <img
+                  src="/images/Misc/BioBuzz.webp"
+                  alt="BIOBUZZ 2026-2027 robot concept"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent via-accent/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 text-left">
+                  <h3 className="font-display text-2xl font-bold text-white">
                     BIOBUZZ 2026-2027
                   </h3>
-                  <p className="mt-2 text-accent-foreground/70">
+                  <p className="mt-2 text-accent-foreground/80">
                     Robot in development
                   </p>
                   <Link
                     href="/robot"
-                    className="mt-6 text-primary font-semibold hover:underline flex items-center gap-1"
+                    className="mt-4 inline-flex items-center gap-1 font-semibold text-primary hover:underline"
                   >
                     Explore Features
                     <ArrowRight className="h-4 w-4" />
