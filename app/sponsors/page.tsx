@@ -95,6 +95,21 @@ const currentSponsors = {
       logo: "M",
       image: "/images/Sponsors/Motorola.png",
     },
+    {
+      name: "Gene Haas Foundation",
+      logo: "GH",
+      image: "/images/Sponsors/geneHaas.WEBP",
+    },
+    {
+      name: "Share Machine",
+      logo: "SM",
+      image: "/images/Sponsors/shareMachine.jpeg",
+    },
+    {
+      name: "Trialus",
+      logo: "T",
+      image: "/images/Sponsors/Trisalus.jpg",
+    },
   ],
   silver: [
     {
@@ -106,6 +121,11 @@ const currentSponsors = {
       name: "Coil Craft",
       logo: "CB",
       image: "/images/Sponsors/CoilCraft.jpg",
+    },
+    {
+      name: "Material Control Solutions",
+      logo: "MCS",
+      image: "/images/Sponsors/materialSolution.PNG",
     },
   ],
   bronze: [],
@@ -197,7 +217,13 @@ export default function SponsorsPage() {
                     ? "h-20 w-24"
                     : sponsor.name === "Main Street Smiles"
                       ? "h-16 w-[9.5rem]"
-                      : "h-12 w-12";
+                      : sponsor.name === "Gene Haas Foundation"
+                        ? "h-16 w-28"
+                        : sponsor.name === "Share Machine"
+                          ? "h-16 w-24"
+                          : sponsor.name === "Trialus"
+                            ? "h-16 w-20"
+                            : "h-12 w-12";
                 const imageContainerClass =
                   sponsor.name === "Main Street Smiles"
                     ? "overflow-hidden rounded-full bg-white/80"
